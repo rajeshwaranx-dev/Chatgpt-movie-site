@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AskMovies — Movie Listings</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <span class="logo-red">Ask</span>Movies
+      </div>
+
+      <div class="header-actions">
+        <div class="search-wrapper" id="searchWrapper" aria-hidden="true">
+          <input id="searchInput" class="search-input" type="search" placeholder="Search movies..." aria-label="Search movies" />
+        </div>
+
+        <button id="searchToggle" class="icon-btn" aria-label="Toggle search">
+          🔍
+        </button>
+
+        <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu">⋮</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    <section class="controls">
+      <div class="filters" id="categoryFilters" role="tablist" aria-label="Categories">
+        <!-- category buttons will be rendered here by JS -->
+      </div>
+
+      <div class="summary" id="summaryText" aria-live="polite"></div>
+    </section>
+
+    <section id="moviesGrid" class="movies-grid" aria-live="polite">
+      <!-- movie cards rendered here -->
+    </section>
+
+    <nav class="pagination-wrap" id="paginationWrap" aria-label="Pagination">
+      <!-- pagination rendered here -->
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© AskMovies — dark premium demo</small>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
