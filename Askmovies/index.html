@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AskMovies - Premium Movie Collection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <svg class="logo-icon" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="5" y="10" width="40" height="30" rx="2" fill="#DC143C"/>
+                        <rect x="10" y="15" width="15" height="20" rx="1" fill="#1a1a1a"/>
+                        <rect x="28" y="15" width="15" height="20" rx="1" fill="#1a1a1a"/>
+                        <circle cx="17.5" cy="25" r="3" fill="#DC143C"/>
+                        <circle cx="35.5" cy="25" r="3" fill="#DC143C"/>
+                    </svg>
+                    <span class="logo-text">Ask<span class="logo-highlight">Movies</span></span>
+                </div>
+
+                <!-- Right Controls -->
+                <div class="header-controls">
+                    <!-- Search -->
+                    <div class="search-container">
+                        <input 
+                            type="text" 
+                            id="searchInput" 
+                            class="search-input" 
+                            placeholder="Search movies..."
+                        >
+                        <button class="search-btn" id="searchBtn" aria-label="Search">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Three Dot Menu -->
+                    <button class="menu-btn" id="menuBtn" aria-label="Menu">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <circle cx="12" cy="5" r="2"></circle>
+                            <circle cx="12" cy="12" r="2"></circle>
+                            <circle cx="12" cy="19" r="2"></circle>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Dropdown -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-content">
+            <a href="#" class="mobile-menu-item">Home</a>
+            <a href="#" class="mobile-menu-item">About</a>
+            <a href="#" class="mobile-menu-item">Contact</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Category Filter -->
+            <section class="filter-section">
+                <div class="filter-container">
+                    <button class="filter-btn active" data-category="All">All</button>
+                    <button class="filter-btn" data-category="Tamil">Tamil</button>
+                    <button class="filter-btn" data-category="English">English</button>
+                    <button class="filter-btn" data-category="Action">Action</button>
+                    <button class="filter-btn" data-category="HD">HD</button>
+                    <button class="filter-btn" data-category="PreDvd">PreDvd</button>
+                </div>
+            </section>
+
+            <!-- Movies Grid -->
+            <section class="movies-section">
+                <div class="movies-grid" id="moviesGrid">
+                    <!-- Movies will be rendered here -->
+                </div>
+            </section>
+
+            <!-- No Results Message -->
+            <div class="no-results" id="noResults">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+                <h3>No Results Found</h3>
+                <p>Try adjusting your search or filter criteria</p>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination" id="pagination">
+                <button class="pagination-btn" id="prevBtn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                    Previous
+                </button>
+                <div class="pagination-numbers" id="paginationNumbers">
+                    <!-- Page numbers will be rendered here -->
+                </div>
+                <button class="pagination-btn" id="nextBtn">
+                    Next
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 AskMovies. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+      </html>
